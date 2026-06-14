@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 5 – CSS Selectors</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" type="text/css" href="lab5.css">
+</head>
+<body>
+    <h1 id="main-heading">Lab 5 – CSS Selector Examples</h1>
+
+    <!-- Element Selector -->
+    <p>This paragraph is styled using the <b>element selector</b>.</p>
+
+    <!-- Class Selector -->
+    <p class="highlight">This paragraph is styled using the <b>class selector</b>.</p>
+
+    <!-- ID Selector -->
+    <h2 id="sub-heading">This sub-heading is styled using the <b>ID selector</b>.</h2>
+
+    <!-- Group Selector -->
+    <h3>Group Selector Example</h3>
+    <p class="grouped">This paragraph shares styles with the heading above.</p>
+
+    <!-- Descendant Selector -->
+    <div class="container">
+        <p>This paragraph is inside a container and styled using the <b>descendant selector</b>.</p>
+    </div>
+
+    <!-- Child Selector -->
+    <div class="parent">
+        <p>This is a direct child paragraph styled using the <b>child selector</b>.</p>
+        <div>
+            <p>This nested paragraph will not be affected by the child selector.</p>
+        </div>
+    </div>
+
+    <!-- Universal Selector -->
+    <p>Universal selector applies a base style to all elements.</p>
+
+    <!-- Pseudo-class Selector -->
+    <a href="https://github.com" target="_blank">Hover over this link (pseudo-class)</a>
+
+    <!-- Internal Links -->
+    <p><a href="lab1.html">Go to Lab 1</a></p>
+    <p><a href="lab2.html">Go to Lab 2</a></p>
+    <p><a href="lab3.html">Go to Lab 3</a></p>
+    <p><a href="lab4.html">Go to Lab 4</a></p>
+
+    <!-- Input / Output Demo -->
+    <h2>Live Output Demo</h2>
+    <p>Type a message and click the button to display it below.</p>
+    <input type="text" id="lab5Input" placeholder="Enter message">
+    <button type="button" id="lab5Button">Show Output</button>
+    <p id="lab5Output"></p>
+
+    <script>
+        document.getElementById('lab5Button').addEventListener('click', function() {
+            const value = document.getElementById('lab5Input').value;
+            document.getElementById('lab5Output').textContent = value ? 'Output: ' + value : 'Please enter something first.';
+        });
+    </script>
+</body>
+</html>

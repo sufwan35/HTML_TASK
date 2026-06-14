@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 3 – Advanced HTML</title>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Lab 3 – My Online Lab Manual</h1>
+
+    <!-- Ordered List -->
+    <h2>Ordered List Example</h2>
+    <ol>
+        <li>Introduction</li>
+        <li>Objectives</li>
+        <li>Conclusion</li>
+    </ol>
+
+    <!-- Unordered List -->
+    <h2>Unordered List Example</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <!-- Nested List -->
+    <h2>Nested List Example</h2>
+    <ul>
+        <li>Programming Languages
+            <ul>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Java</li>
+            </ul>
+        </li>
+        <li>Databases</li>
+    </ul>
+
+    <!-- Table with Caption -->
+    <h2>Table Example</h2>
+    <table border="1">
+        <caption>Course Information</caption>
+        <tr>
+            <th>Course</th>
+            <th>Department</th>
+            <th>Instructor</th>
+        </tr>
+        <tr>
+            <td>Web Technologies</td>
+            <td>Computer Science</td>
+            <td>Dr. Ahmed</td>
+        </tr>
+        <tr>
+            <td>AI Fundamentals</td>
+            <td>Computer Science</td>
+            <td>Prof. Khan</td>
+        </tr>
+    </table>
+
+    <!-- Images -->
+    <h2>Images</h2>
+    <!-- Local image (inside repo images/ folder) -->
+    <img src="images/local_image.png" alt="Local Screenshot" width="400">
+    <!-- External image (URL) -->
+    <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5 Logo" width="200">
+
+    <!-- Hyperlinks -->
+    <h2>Hyperlinks</h2>
+    <!-- Internal links -->
+    <p><a href="lab1.html">Go to Lab 1</a></p>
+    <p><a href="lab2.html">Go to Lab 2</a></p>
+    <!-- External link -->
+    <p><a href="https://www.github.com" target="_blank">Visit GitHub</a></p>
+
+    <!-- Input and Output Example -->
+    <h2>Input / Output Demo</h2>
+    <p>Enter text and click the button to display it below.</p>
+    <input type="text" id="lab3Input" placeholder="Type something here">
+    <button type="button" id="lab3Button">Show Output</button>
+    <p id="lab3Output"></p>
+
+    <script>
+        document.getElementById('lab3Button').addEventListener('click', function() {
+            const text = document.getElementById('lab3Input').value;
+            const output = document.getElementById('lab3Output');
+            output.textContent = text ? 'Output: ' + text : 'Please enter some text first.';
+        });
+    </script>
+</body>
+</html>

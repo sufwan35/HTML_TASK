@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4 – CSS Styling</title>
+
+    <!-- Internal CSS -->
+    <style>
+        h2 {
+            color: darkblue;
+            text-decoration: underline;
+        }
+        p.internal {
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Inline CSS -->
+    <h1 style="color: red; font-family: Arial;">Lab 4 – Inline CSS Heading</h1>
+    <p style="color: purple; font-size: 16px;">
+        This paragraph is styled using <b>inline CSS</b>.
+    </p>
+
+    <!-- Internal CSS -->
+    <h2>Lab 4 – Internal CSS Subheading</h2>
+    <p class="internal">
+        This paragraph is styled using <b>internal CSS</b>.
+    </p>
+
+    <!-- External CSS -->
+    <h3>Lab 4 – External CSS Heading</h3>
+    <p class="external">
+        This paragraph is styled using <b>external CSS</b>.
+    </p>
+
+    <!-- Input / Output Example -->
+    <h2>Live Output Demo</h2>
+    <p>Type a message and click the button to see it display below.</p>
+    <input type="text" id="lab4Input" placeholder="Enter message">
+    <button type="button" id="lab4Button">Show Output</button>
+    <p id="lab4Output"></p>
+
+    <script>
+        document.getElementById('lab4Button').addEventListener('click', function() {
+            const value = document.getElementById('lab4Input').value;
+            document.getElementById('lab4Output').textContent = value ? 'Output: ' + value : 'Please enter something first.';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* External CSS file */
+body {
+    background-color: #f0f0f0;
+    font-family: Verdana, sans-serif;
+}
+
+h3 {
+    color: darkred;
+    font-size: 22px;
+}
+
+p.external {
+    color: navy;
+    font-size: 18px;
+}
